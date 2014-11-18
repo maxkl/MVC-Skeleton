@@ -1,4 +1,4 @@
 MVC-Skeleton
 ============
 
-Ein kleines MVC Framework
+Ein kleines PHP MVC Framework
