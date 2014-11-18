@@ -1,0 +1,19 @@
+{% extends "shared/base.twig" %}
+{% block content %}
+	{% if loggedin %}
+		<h1>Hi {{ user }}!</h1>
+		<p>
+			Du bist bereits angemeldet. Hier kannst du dich abmelden.
+		</p>
+	{% else %}
+		<h1>Anmelden</h1>
+		<p>
+			Hi! Bitte melde dich an.
+		<form action="{{ constant('URL') }}/auth/login" method="POST">
+			<div><label for="username">Benutzername</label><input type="text" name="username" id="username" /></div>
+			<div><label for="password">Passwort</label><input type="password" name="password" id="password" /></div>
+			<div><input type="submit" name="login" value="Anmelden" /></div>
+		</form>
+		</p>
+	{% endif %}
+{% endblock %}
